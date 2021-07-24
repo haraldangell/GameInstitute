@@ -17,7 +17,7 @@ public:
 	int  getPlayerXPos();
 	int  getPlayerYPos();
 	void movePlayer();
-	Monster* checkRandomEncounter();
+	bool checkRandomEncounter(Player &player, int number);
 	void printPlayerPos();
 
 private:

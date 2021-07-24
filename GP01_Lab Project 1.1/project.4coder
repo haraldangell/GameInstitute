@@ -1,0 +1,43 @@
+version(1);
+
+project_name = "GP01 Lab 1.0";
+
+
+patterns = {
+"*.cpp", 
+"*.h", 
+"*.bat", 
+"*.4coder",};
+
+blacklist_patterns = {
+".*",
+};
+load_paths_win = { {"."}};
+
+load_paths = {
+{ load_paths_win, .os = "win" },
+	
+};
+
+run_win = "build\\WinGame";
+
+command_list = {
+{   .name = "build",
+	.out = "*compilation*", .footer_panel = true, .save_dirty_files = true, .cursor_at_end = false,
+	.cmd = {{"build.bat", .os = "win"}, },
+	
+},
+{	.name = "run",
+	 .out = "*run*", .footer_panel = false, .save_dirty_files = false, .cursor_at_end = true,
+	.cmd = {{run_win, .os = "win"}, },
+	
+ },
+{	.name = "debug",
+	 .out = "*debug*", .footer_panel = false, .save_dirty_files = false, .cursor_at_end = true,
+	.cmd = {{"Devenv /DebugExe build\\WinGame" , .os = "win"}, },
+	
+ },
+};
+fkey_command[1] = "build";
+fkey_command[2] = "run";
+fkey_command[5] = "debug";

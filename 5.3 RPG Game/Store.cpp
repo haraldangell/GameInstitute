@@ -134,8 +134,8 @@ void Store::enter(Player& player, std::string name)
 		case 4:
 		{
 			ITEMS:
-		 	auto answer = 0;
-			auto amount = 0;
+		 	int answer = 0;
+			int amount = 0;
 
 
 			cout << "Would you like to buy a potions today?" << endl;

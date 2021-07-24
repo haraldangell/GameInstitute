@@ -449,7 +449,7 @@ void Player::victory(int xp, int gold)
 	mGold += gold;
 }
 
-void Player::gameover(bool& done)
+void Player::gameover()
 {
 	cout << "You died in battle..." << endl;
 	cout << endl;
@@ -460,7 +460,6 @@ void Player::gameover(bool& done)
 	char q = 'q';
 	cin >> q;
 	cout << endl;
-	done = true;
 }
 
 void Player::displayHitPoints() const

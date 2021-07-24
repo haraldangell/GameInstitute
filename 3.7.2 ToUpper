@@ -1,3 +1,31 @@
-﻿  Source.cpp
-g:\training\gameinstitute\3.7.2 toupper; tolower\source.cpp(16): warning C4018: '<': signed/unsigned mismatch
-  3.7.2 ToUpper; ToLower.vcxproj -> G:\Training\GameInstitute\Debug\3.7.2 ToUpper; ToLower.exe
+﻿Build started 23/07/2020 22:46:24.
+Logging verbosity is set to: Normal.     1>Project "G:\Training\GameInstitute\3.7.2 ToUpper; ToLower\3.7.2 ToUpper; ToLower.vcxproj" on node 3 (Build target(s)).
+     1>PrepareForBuild:
+         Creating directory "Release\3.7.2 To.C52AC7AF.tlog\".
+       InitializeBuildStatus:
+         Creating "Release\3.7.2 To.C52AC7AF.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:classic /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:prompt "..\3.7.2 ToUpper; ToLower\Source.cpp"
+         Source.cpp
+     1>g:\training\gameinstitute\3.7.2 toupper; tolower\source.cpp(16): warning C4018: '<': signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Training\GameInstitute\Release\3.7.2 ToUpper; ToLower.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FULL /PDB:"G:\Training\GameInstitute\Release\3.7.2 ToUpper; ToLower.pdb" /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Training\GameInstitute\Release\3.7.2 ToUpper; ToLower.lib" /MACHINE:X86 /SAFESEH Release\Source.obj
+         Generating code
+         All 68 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+         Finished generating code
+         3.7.2 ToUpper; ToLower.vcxproj -> G:\Training\GameInstitute\Release\3.7.2 ToUpper; ToLower.exe
+       FinalizeBuildStatus:
+         Deleting file "Release\3.7.2 To.C52AC7AF.tlog\unsuccessfulbuild".
+         Touching "Release\3.7.2 To.C52AC7AF.tlog\3.7.2 ToUpper; ToLower.lastbuildstate".
+     1>Done Building Project "G:\Training\GameInstitute\3.7.2 ToUpper; ToLower\3.7.2 ToUpper; ToLower.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+       "G:\Training\GameInstitute\3.7.2 ToUpper; ToLower\3.7.2 ToUpper; ToLower.vcxproj" (Build target) (1) ->
+       (ClCompile target) -> 
+         g:\training\gameinstitute\3.7.2 toupper; tolower\source.cpp(16): warning C4018: '<': signed/unsigned mismatch
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.55

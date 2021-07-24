@@ -1,0 +1,11 @@
+    static HMENU hMenu;
+    static HMENU hMenuPopup;
+    
+    
+    hMenu = CreateMenu();
+    hMenuPopup = CreateMenu();
+    
+    //AppendMenu (hMenuPopup, MF_SEPARATOR, 0, NULL);
+    AppendMenu (hMenuPopup, MF_STRING, ID_FILE_EXIT, TEXT("&Exit"));
+    
+    AppendMenu (hMenu, MF_POPUP, (UINT_PTR)hMenuPopup, "&File" );

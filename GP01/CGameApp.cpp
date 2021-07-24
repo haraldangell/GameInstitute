@@ -216,18 +216,18 @@ bool CGameApp::BuildObjects()
 	pPoly = m_Mesh.m_pPolygon[0];
 	if (pPoly->AddVertex(4) < 0) return false;
 
-	pPoly->m_pVertex[0] = CVertex(-2, 2, -2);
-	pPoly->m_pVertex[1] = CVertex(2, 2, -2);
-	pPoly->m_pVertex[2] = CVertex(2, -2, -2);
+	pPoly->m_pVertex[0] = CVertex(-2,  2, -2);
+	pPoly->m_pVertex[1] = CVertex( 2,  2, -2);
+	pPoly->m_pVertex[2] = CVertex( 2, -2, -2);
 	pPoly->m_pVertex[3] = CVertex(-2, -2, -2);
 
 	// Top Face
 	pPoly = m_Mesh.m_pPolygon[1];
 	if (pPoly->AddVertex(4) < 0) return false;
 
-	pPoly->m_pVertex[0] = CVertex(-2, 2, 2);
-	pPoly->m_pVertex[1] = CVertex(2, 2, 2);
-	pPoly->m_pVertex[2] = CVertex(2, 2, -2);
+	pPoly->m_pVertex[0] = CVertex(-2, 2,  2);
+	pPoly->m_pVertex[1] = CVertex( 2, 2,  2);
+	pPoly->m_pVertex[2] = CVertex( 2, 2, -2);
 	pPoly->m_pVertex[3] = CVertex(-2, 2, -2);
 
 	// Back Face
@@ -235,36 +235,36 @@ bool CGameApp::BuildObjects()
 	if (pPoly->AddVertex(4) < 0) return false;
 
 	pPoly->m_pVertex[0] = CVertex(-2, -2, 2);
-	pPoly->m_pVertex[1] = CVertex(2, -2, 2);
-	pPoly->m_pVertex[2] = CVertex(2, 2, 2);
-	pPoly->m_pVertex[3] = CVertex(-2, 2, 2),
+	pPoly->m_pVertex[1] = CVertex( 2, -2, 2);
+	pPoly->m_pVertex[2] = CVertex( 2,  2, 2);
+	pPoly->m_pVertex[3] = CVertex(-2,  2, 2),
 
 	// Bottom Face
 	pPoly = m_Mesh.m_pPolygon[3];
 	if (pPoly->AddVertex(4) < 0) return false;
 
 	pPoly->m_pVertex[0] = CVertex(-2, -2, -2);
-	pPoly->m_pVertex[1] = CVertex(2, -2, -2);
-	pPoly->m_pVertex[2] = CVertex(2, -2, 2);
-	pPoly->m_pVertex[3] = CVertex(-2, -2, 2);
+	pPoly->m_pVertex[1] = CVertex( 2, -2, -2);
+	pPoly->m_pVertex[2] = CVertex( 2, -2,  2);
+	pPoly->m_pVertex[3] = CVertex(-2, -2,  2);
 
 	// Left Face
 	pPoly = m_Mesh.m_pPolygon[4];
 	if (pPoly->AddVertex(4) < 0) return false;
 
-	pPoly->m_pVertex[0] = CVertex(-2, 2, 2);
-	pPoly->m_pVertex[1] = CVertex(-2, 2, -2);
+	pPoly->m_pVertex[0] = CVertex(-2,  2,  2);
+	pPoly->m_pVertex[1] = CVertex(-2,  2, -2);
 	pPoly->m_pVertex[2] = CVertex(-2, -2, -2);
-	pPoly->m_pVertex[3] = CVertex(-2, -2, 2);
+	pPoly->m_pVertex[3] = CVertex(-2, -2,  2);
 
 	// Right Face
 	pPoly = m_Mesh.m_pPolygon[5];
 	if (pPoly->AddVertex(4) < 0) return false;
 
 	pPoly->m_pVertex[0] = CVertex(2, 2, -2);
-	pPoly->m_pVertex[1] = CVertex(2, 2, 2);
-	pPoly->m_pVertex[2] = CVertex(2, -2, 2);
-	pPoly->m_pVertex[3] = CVertex(2, -2, -2);
+	pPoly->m_pVertex[1] = CVertex(2, 2,  2);
+	pPoly->m_pVertex[2] = CVertex(2,-2,  2);
+	pPoly->m_pVertex[3] = CVertex(2,-2, -2);
 
 	// Our two objects should reference this mesh
 	m_pObject[0].m_pMesh = &m_Mesh;

@@ -33,7 +33,7 @@ public:
 	void rest();
 	void viewStats() const;
 	void victory(int xp, int gold);
-	void gameover(bool& done);
+	void gameover();
 	void displayHitPoints() const;
 	void addSpell(std::string name, int low, int high, int required);
 	void addSpell(Spell spell);

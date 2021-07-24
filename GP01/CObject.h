@@ -5,6 +5,7 @@
 class CVertex 
 {
 public:
+	
 	CVertex(float fX, float fY, float fZ) { x = fX; y = fY, z = fZ; }
 	CVertex() { x = 0.0f; y = 0.0f, z = 0.0f; }
 

@@ -11,7 +11,7 @@
 using namespace std;
 
 bool done = false;
-void monsterHunt(Monster* monster, Player& player);
+
 
 int main()
 {
@@ -41,7 +41,7 @@ int main()
 		cout << "1) Move, 2) Rest, 3) View Stats, 4) Quit: ";
 		cin >> selection;
 
-		std::vector<Monster*> monster;
+		
 		switch (selection)
 		{
 		case 1:
@@ -51,32 +51,26 @@ int main()
 			// Check for a random encounter.  This function
 			// returns a null pointer if no monsters are
 			// encountered.
-			int test = Random(1, mainPlayer.getLevel());
-			if (test == 0)
-				for (int i = 0; i < test; ++i)
-					monster.push_back(gameMap.checkRandomEncounter());
-			if (!monster.empty())
-				for (int i = 0; i < test; ++i)
-				{
-					monsterHunt(monster[i], mainPlayer);
-					if (monster[i]->isDead())
-					{
-						delete monster[i];
-					}
-				}
+			int number = Random(1, mainPlayer.getLevel());
 
-
+			if (number > 0)
+			{
+				done = gameMap.checkRandomEncounter(mainPlayer, number);
+			}
+			if(done)
+				mainPlayer.gameover();
 			break;
 		}
 
 		case 2:
 		{
+			int number = Random(1, mainPlayer.getLevel());
 			if (1 == Random(1, 4))
 			{
-				monster.push_back(gameMap.checkRandomEncounter());
-				if (monster.empty())
-					monsterHunt(monster[0], mainPlayer);
+				done = gameMap.checkRandomEncounter(mainPlayer, number);
 
+				if (done)
+					mainPlayer.gameover();
 			}
 
 			mainPlayer.rest();
@@ -96,50 +90,8 @@ int main()
 		}
 	}
 }
-void monsterHunt(Monster * monster, Player & player)
-{
-	// Check for a random encounter.  This function
-	// returns a null pointer if no monsters are
-	// encountered.
-	// 'monster' not null, run combat simulation.
-		// Loop until a 'break' statement.
-	while (true)
-	{
-		// Display hitpoints.
-		player.displayHitPoints();
-		monster->displayHitPoints();
-		cout << endl;
-
-		// Player's turn to attack first.
-		bool runAway = player.attack(*monster);
-
-		if (runAway)
-			break;
-
-		if (monster->isDead())
-		{
-			player.victory(monster->getXPReward(), monster->getGold());
-			player.levelUp();
-		}
-		else
-			monster->attack(player);
-
-		if (player.isDead())
-		{
-			player.gameover(done);
-			done = true;
-			break;
-		}
 
 
 
-	}
-
-	// The pointer to a monster returned from
-	// checkRandomEncounter was allocated with
-	// 'new', so we must delete it to avoid
-	// memory leaks.
 
 
-
-}
